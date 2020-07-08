@@ -1,17 +1,13 @@
 # overview
 
-The bare bones to Dockerize Flask.
+Bare bones implementation of:
 
-## why (does this exist)?
+* a Flask app
+* dealing with multiple environments
+* using secrets
+* Dockerized
 
-Most 'hello world' examples of a Dockerized Flask app suffer from one of these problems:
-
-* They're not actually 'hello world'; they add gunicorn, a database setup, a REST framework. In other words, more stuff to debug when you just want to get started with Docker.
-* They use the old way of initializing a Flask app (i.e. `if __name__ == '__main__:'`), which harkens from when Flask still didn't have a major version released (prior to 2018).
-
-This repo, on the other hand, aims to be a minimal, viable, and complete, and nothing more.
-
-## how (to run)?
+## how to run?
 
 To run as a container, have DockerCE installed and use the `Makefile`:
 
@@ -37,6 +33,7 @@ I have [another branch that uses `venv` for dependency management](https://githu
 
 I have a few other projects like this:
 
+* [Docker + Flask](https://github.com/zachvalenta/docker-flask)
 * [Docker + Flask + Postgres](https://github.com/zachvalenta/docker-flask-postgres)
 * [Docker + Flask + SQLite](https://github.com/zachvalenta/docker-flask-sqlite)
 * [Docker + Flask + SQLite + gunicorn](https://github.com/zachvalenta/docker-flask-sqlite-gunicorn)
