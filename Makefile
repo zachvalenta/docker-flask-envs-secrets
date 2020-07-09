@@ -6,6 +6,8 @@ help:
 	@echo
 	@echo "🍶 FLASK"
 	@echo
+	@echo "env-dev:     link env var for dev environment"
+	@echo "env-prod:    link env var for production environment"
 	@echo "flask:       start app"
 	@echo "hc:          healthcheck"
 	@echo
@@ -30,6 +32,12 @@ help:
 #
 # 🍶 FLASK
 #
+
+env-dev:
+	ln -sf .env.dev .env
+
+env-prod:
+	ln -sf .env.prod .env
 
 flask:
 	poetry run flask run
