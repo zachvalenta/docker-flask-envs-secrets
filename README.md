@@ -29,8 +29,6 @@ Of course, you can still work with the app locally (outside of a container, on y
 
 ## FYI
 
-I have [another branch that uses `venv` for dependency management](https://github.com/zachvalenta/docker-flask-skeleton/tree/poetry).
-
 I have a few other projects like this:
 
 * [Docker + Flask](https://github.com/zachvalenta/docker-flask)
