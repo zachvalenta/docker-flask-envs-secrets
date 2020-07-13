@@ -51,7 +51,7 @@ env-prod:
 #
 
 flask:
-	poetry run flask run
+	export "SECRET_KEY=$(key)"; poetry run flask run
 
 hc:
 	http http://localhost:5000/healthcheck
