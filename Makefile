@@ -4,10 +4,14 @@ name = "docker-flask-envs-secrets"
 
 help:
 	@echo
-	@echo "🍶 FLASK"
+	@echo "🌓 ENVIRONMENT"
 	@echo
+	@echo "env-list:    show current environment"
 	@echo "env-dev:     link env var for dev environment"
 	@echo "env-prod:    link env var for production environment"
+	@echo
+	@echo "🍶 FLASK"
+	@echo
 	@echo "flask:       start app"
 	@echo "hc:          healthcheck"
 	@echo
@@ -30,14 +34,21 @@ help:
 	@echo
 
 #
-# 🍶 FLASK
+# 🌓 ENVIRONMENT
 #
+
+env-list:
+	ls -al | grep '>'
 
 env-dev:
 	ln -sf .env.dev .env
 
 env-prod:
 	ln -sf .env.prod .env
+
+#
+# 🍶 FLASK
+#
 
 flask:
 	poetry run flask run
