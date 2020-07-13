@@ -56,7 +56,7 @@ rebuild: stop rm
 	docker build -t $(name) .
 
 start:
-	docker run --name $(name) -p 5000:5000 $(name)
+	docker run -e "SECRET_KEY=$(key)" --name $(name) -p 5000:5000 $(name)
 
 stop:
 	docker stop $(name)
